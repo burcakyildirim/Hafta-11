@@ -8,7 +8,7 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "publisher_id",columnDefinition = "serial")
-    private int id;
+    private Long id;
 
     @Column(name = "publisher_name", nullable = false)
     private String name;
@@ -25,11 +25,11 @@ public class Publisher {
     public Publisher() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

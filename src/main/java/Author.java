@@ -11,7 +11,7 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_id", columnDefinition = "serial")
-    private int id;
+    private Long id;
 
     @Column(name = "author_name", nullable = false)
     private String name;
@@ -29,11 +29,11 @@ public class Author {
     public Author() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

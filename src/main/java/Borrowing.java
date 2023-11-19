@@ -8,7 +8,7 @@ public class Borrowing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "borrower_id",columnDefinition = "serial")
-    private int id;
+    private Long id;
 
     @Column(name = "borrower_name",nullable = false)
     private String name;
@@ -28,11 +28,11 @@ public class Borrowing {
     public Borrowing() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
