@@ -27,7 +27,7 @@ public class Book {
     @JoinColumn(name = "book_publisher_id", referencedColumnName = "publisher_id")
     private Publisher publisher;
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book", cascade = CascadeType.REMOVE)
     private List<Borrowing> borrowingList;
 
     @ManyToMany(fetch = FetchType.LAZY)
